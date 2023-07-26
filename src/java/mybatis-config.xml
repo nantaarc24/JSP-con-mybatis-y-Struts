@@ -1,0 +1,27 @@
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    
+    <typeAliases>
+        <typeAlias alias="Alquiler" type="edu.sise.entity.Alquiler"></typeAlias>
+    </typeAliases>
+    
+    <environments default="conexion1">
+        <environment id="conexion1">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"></property>
+                <property name="url" value="jdbc:mysql://localhost/BDFinal"></property>
+                <property name="username" value="root"></property>
+                <property name="password" value=""></property>
+            </dataSource>
+        </environment>
+    </environments>
+    
+    <mappers>
+        <mapper resource="edu/sise/mappers/AlquilerMapper.xml"></mapper>
+    </mappers>
+    
+</configuration>

@@ -1,0 +1,30 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+
+    <package name="struts-ejemplo" extends="struts-default">
+        
+        <action name="agregarAlquiler" class="edu.sise.actions.AlquilerAction" method="agregarAlquiler">
+            <result name="success" type="redirect">mostrarAlquileres</result>
+            <result name="error">error.jsp</result>
+        </action>
+
+        <action name="mostrarAlquileres" class="edu.sise.actions.AlquilerAction" method="mostrarAlquileres">
+            <result name="success">listarAlquiler.jsp</result>
+        </action>
+        
+        <action name="verReporte" class="edu.sise.actions.ReporteAction" method="verReporte">
+            
+        </action>
+        
+        <action name="verReporte2" class="edu.sise.actions.ReporteAction" method="verReporte2">
+            
+        </action>
+        
+        
+    </package>
+
+</struts>

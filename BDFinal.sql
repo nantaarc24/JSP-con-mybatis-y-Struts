@@ -1,0 +1,14 @@
+CREATE DATABASE BDFinal;
+USE BDFinal;
+
+CREATE TABLE TB_Alquiler(
+Codigo INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+DniConductor CHAR(8),
+Auto VARCHAR(50),
+Fecha VARCHAR(10),
+DiasAlquiler INT,
+PrecioDia DECIMAL(6,2)
+);
+
+
+
